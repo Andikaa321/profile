@@ -1,78 +1,128 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .profile-container {
     width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    overflow: hidden;
 }
 
+/* Profile Header */
 .profile-header {
     display: flex;
     align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    border: 3px solid #0095f6;
     margin-right: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
 }
 
 .profile-info h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
     margin: 0;
-    font-size: 24px;
+}
+
+.bio {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 .profile-stats p {
-    margin: 5px 0;
+    margin: 8px 0;
     font-size: 16px;
+    color: #555;
 }
 
 .stat-value {
     font-weight: bold;
+    color: #0095f6;
 }
 
-.follow-button button {
-    padding: 12px 25px;
-    background-color: #0095f6;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Favorite Song Section */
+.favorite-song p {
     font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-.follow-button button:hover {
-    background-color: #007bb5;
+.favorite-song audio {
+    width: 100%;
+    background: #f2f2f2;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 15px;
+    transition: box-shadow 0.3s ease;
 }
 
-.follow-button button.following {
-    background-color: #ff5c5c;
+.favorite-song audio:hover {
+    box-shadow: 0 0 15px rgba(0, 149, 246, 0.5);
 }
 
-.follow-button button.following:hover {
-    background-color: #e53b3b;
+.favorite-song audio::-webkit-media-controls {
+    background-color: #0095f6;
 }
 
+.favorite-song audio::-webkit-media-controls-play-button {
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.favorite-song audio::-webkit-media-controls-volume-slider {
+    background-color: #0095f6;
+}
+
+/* Post Container */
 .posts-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+.post {
+    width: 48%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .post img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post:hover {
+    transform: scale(1.05);
 }
