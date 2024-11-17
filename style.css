@@ -8,23 +8,27 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .profile-container {
-    width: 80%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 450px; /* Adjust for mobile size */
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Profile Header */
 .profile-header {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
 }
 
 .profile-image {
@@ -32,7 +36,7 @@ body {
     height: 120px;
     border-radius: 50%;
     border: 3px solid #0095f6;
-    margin-right: 20px;
+    margin-bottom: 20px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
@@ -42,10 +46,11 @@ body {
 }
 
 .profile-info h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #333;
     margin: 0;
+    word-wrap: break-word;
 }
 
 .bio {
@@ -53,6 +58,7 @@ body {
     color: #666;
     margin-top: 10px;
     line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .profile-stats p {
@@ -70,7 +76,7 @@ body {
 .favorite-song p {
     font-size: 16px;
     color: #333;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: bold;
 }
 
@@ -80,7 +86,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ddd;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -104,8 +110,9 @@ body {
 /* Post Container */
 .posts-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .post {
@@ -114,6 +121,7 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .post img {
@@ -125,4 +133,68 @@ body {
 
 .post:hover {
     transform: scale(1.05);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 22px;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
+
+    .profile-stats p {
+        font-size: 14px;
+    }
+
+    .favorite-song p {
+        font-size: 14px;
+    }
+
+    .favorite-song audio {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .bio {
+        font-size: 13px;
+    }
+
+    .profile-stats p {
+        font-size: 12px;
+    }
+
+    .favorite-song p {
+        font-size: 12px;
+    }
+
+    .favorite-song audio {
+        margin-top: 8px;
+    }
+
+    .post {
+        width: 100%;
+    }
 }
