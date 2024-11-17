@@ -12,8 +12,8 @@ body {
 }
 
 .profile-container {
-    width: 100%;
-    max-width: 450px; /* Adjust for mobile size */
+    width: 90%;
+    max-width: 400px; /* Adjusted for mobile size */
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -25,15 +25,15 @@ body {
 /* Profile Header */
 .profile-header {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 3px solid #0095f6;
     margin-bottom: 20px;
@@ -46,7 +46,7 @@ body {
 }
 
 .profile-info h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #333;
     margin: 0;
@@ -54,7 +54,7 @@ body {
 }
 
 .bio {
-    font-size: 16px;
+    font-size: 14px;
     color: #666;
     margin-top: 10px;
     line-height: 1.5;
@@ -62,8 +62,8 @@ body {
 }
 
 .profile-stats p {
-    margin: 8px 0;
-    font-size: 16px;
+    margin: 5px 0;
+    font-size: 14px;
     color: #555;
 }
 
@@ -74,7 +74,7 @@ body {
 
 /* Favorite Song Section */
 .favorite-song p {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     margin-top: 15px;
     font-weight: bold;
@@ -110,18 +110,17 @@ body {
 /* Post Container */
 .posts-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     margin-top: 20px;
 }
 
 .post {
-    width: 48%;
+    width: 100%;
+    margin-bottom: 10px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin-bottom: 10px;
 }
 
 .post img {
@@ -135,7 +134,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Mobile-specific Design - Removes Desktop Styles */
 @media screen and (max-width: 768px) {
     .profile-container {
         padding: 15px;
@@ -143,39 +142,12 @@ body {
     }
 
     .profile-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile-info h1 {
-        font-size: 22px;
-    }
-
-    .bio {
-        font-size: 14px;
-    }
-
-    .profile-stats p {
-        font-size: 14px;
-    }
-
-    .favorite-song p {
-        font-size: 14px;
-    }
-
-    .favorite-song audio {
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .profile-image {
         width: 90px;
         height: 90px;
     }
 
     .profile-info h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .bio {
@@ -192,9 +164,5 @@ body {
 
     .favorite-song audio {
         margin-top: 8px;
-    }
-
-    .post {
-        width: 100%;
     }
 }
